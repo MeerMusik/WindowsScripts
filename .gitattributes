@@ -1,0 +1,18 @@
+# Set Encoding, declare if text or binary and set the Line Feed (LF) and Carriage Return (CR) Values
+# GitHub Config Files
+*.json text encoding=utf-8 eol=lf
+pull_request_template.md encoding=utf-8 eol=lf
+# Remove 'WaitingForYamlSupport.md' after creating the Yaml Pull Request Templates!
+WaitingForYamlSupport.md encoding=utf-8 eol=lf
+*.yml text encoding=utf-8 eol=lf
+*.yaml text encoding=utf-8 eol=lf
+# The Shell Scripts in this Repository are used on MSYS2 = Only Line Feed
+*.sh text encoding=utf-8 eol=lf
+# All other Files
+*.cmd text encoding=utf-8 eol=crlf
+*.md text encoding=utf-8 eol=crlf
+*.txt text encoding=utf-8 eol=crlf
+CC0-1.0.txt text encoding=utf-8 eol=crlf
+THE_UNLICENSE.txt text encoding=utf-8 eol=crlf
+# Keep the Linux LF - Most Repository and Server Software is Linux / Unix based
+LICENSE text encoding=utf-8 eol=lf

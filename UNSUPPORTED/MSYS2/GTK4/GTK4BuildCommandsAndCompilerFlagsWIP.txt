@@ -1,0 +1,176 @@
+Basic Commands and Flags to build GTK4, GTK4MM and the basic Dependencies! Heavily WIP! No personalized Settings yet - only to get the Basics going!
+Freetype2:
+
+export LIBPNG_CFLAGS="-I/path/to/libpng/include/directory"
+export LIBPNG_LIBS="-L/path/to/libpng/lib/directory"
+
+1. Run Autogen because we build from Source:
+./autogen.sh --prefix=c:/Dev/Sources/GTK4/fontconfig/
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/fontconfig/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+Fontconfig:
+export PKG_CONFIG_PATH=path to freetype2 OR
+
+export FREETYPE_CFLAGS
+export FREETYPE_LIBS
+
+1. Run Autogen because we build from Source:
+./autogen.sh --prefix=c:/Dev/Sources/GTK4/fontconfig/
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+Glib:
+
+1. Run Autogen because we build from Source:
+./autogen.sh
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+Gobject-introspection:
+
+1. Run Autogen because we build from Source:
+./autogen.sh
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+1. Run Autogen because we build from Source:
+./autogen.sh
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+1. Run Autogen because we build from Source:
+./autogen.sh
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+1. Run Autogen because we build from Source:
+./autogen.sh
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+1. Run Autogen because we build from Source:
+./autogen.sh
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+1. Run Autogen because we build from Source:
+./autogen.sh
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+Libepoxy:
+1. Run Autogen because we build from Source:
+./autogen.sh
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+Libiconv:
+
+1. Run Autogen because we build from Source:
+./autogen.sh
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+Libpng-code:
+
+1. Run Autogen because we build from Source:
+./autogen.sh
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+Libxkbcommon:
+
+1. Run Autogen because we build from Source:
+./autogen.sh
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+Pango:
+
+1. Run Autogen because we build from Source:
+./autogen.sh
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
+----
+
+
+Zlib:
+
+1. Run Autogen because we build from Source:
+./autogen.sh
+2. Configure:
+./configure --prefix=c:/Dev/Sources/GTK4/freetype/ --enable-static
+3. Make:
+make -j
+4. make --jobs=1 V=1 install:
+make -j1 install
