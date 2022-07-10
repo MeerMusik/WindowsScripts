@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 # SPDX-License-Identifier: Unlicense OR CC0-1.0
-# Copyright © 2021 Oliver Niebuhr, https://github.com/MeerMusik/WindowsScripts / https://oliverniebuhr.de / https://twitter.com/MeerMusik
+# Copyright © 2021 - 2022 Oliver Niebuhr, https://github.com/MeerMusik/WindowsScripts / https://oliverniebuhr.de / https://twitter.com/MeerMusik
 # - CC0 1.0 Universal License Text Start -
 # WindowsScripts
 # Written in 2021 by Oliver Niebuhr, email: gitrepos@oliverniebuhr.de / Website: https://oliverniebuhr.de / Twitter: https://twitter.com/MeerMusik
@@ -15,6 +15,6 @@ if [ -d ${SYSTEMDRIVE}/Dev/GitRepos/icu/ ]; then rm --interactive=never --dir --
 fi
 cd ${SYSTEMDRIVE}/Dev/GitRepos/
 echo 'maint/maint-NN' contains the latest Changes for the used ICU Version. Change the Number to switch to a new ICU Version.
-git clone https://github.com/unicode-org/icu.git/ --branch=maint/maint-70 --verbose --progress
+git clone --branch=maint/maint-71 https://github.com/unicode-org/icu.git/ --verbose --progress
 echo DONE!
 exit

@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 # SPDX-License-Identifier: Unlicense OR CC0-1.0
-# Copyright © 2021 Oliver Niebuhr, https://github.com/MeerMusik/WindowsScripts / https://oliverniebuhr.de / https://twitter.com/MeerMusik
+# Copyright © 2021 - 2022 Oliver Niebuhr, https://github.com/MeerMusik/WindowsScripts / https://oliverniebuhr.de / https://twitter.com/MeerMusik
 # - CC0 1.0 Universal License Text Start -
 # WindowsScripts
 # Written in 2021 by Oliver Niebuhr, email: gitrepos@oliverniebuhr.de / Website: https://oliverniebuhr.de / Twitter: https://twitter.com/MeerMusik
@@ -14,9 +14,6 @@ fi
 if [ -d ${SYSTEMDRIVE}/Dev/GitRepos/openssl/ ]; then rm --interactive=never --dir --recursive --force --verbose ${SYSTEMDRIVE}/Dev/GitRepos/openssl/*.* ${SYSTEMDRIVE}/Dev/GitRepos/openssl/* ${SYSTEMDRIVE}/Dev/GitRepos/openssl/
 fi
 cd ${SYSTEMDRIVE}/Dev/GitRepos/
-git clone https://github.com/openssl/openssl.git --verbose --progress
-cd ${SYSTEMDRIVE}/Dev/GitRepos/openssl/
-git checkout OpenSSL_1_1_1-stable --progress
-git fetch 'origin' --tags --verbose --progress
+git clone --branch openssl-3.0 https://github.com/openssl/openssl.git --verbose --progress
 echo DONE!
 exit

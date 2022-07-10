@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 # SPDX-License-Identifier: Unlicense OR CC0-1.0
-# Copyright © 2021 Oliver Niebuhr, https://github.com/MeerMusik/WindowsScripts / https://oliverniebuhr.de / https://twitter.com/MeerMusik
+# Copyright © 2021 - 2022 Oliver Niebuhr, https://github.com/MeerMusik/WindowsScripts / https://oliverniebuhr.de / https://twitter.com/MeerMusik
 # - CC0 1.0 Universal License Text Start -
 # WindowsScripts
 # Written in 2021 by Oliver Niebuhr, email: gitrepos@oliverniebuhr.de / Website: https://oliverniebuhr.de / Twitter: https://twitter.com/MeerMusik
@@ -15,6 +15,6 @@ if [ -d ${SYSTEMDRIVE}/Dev/GitRepos/llvm-project/ ]; then rm --interactive=never
 fi
 cd ${SYSTEMDRIVE}/Dev/GitRepos/
 echo Set the wanted Branch accordingly or remove it completely to use the MAIN Branch
-git clone https://github.com/llvm/llvm-project.git --branch release/13.x --verbose --progress
+git clone --branch release/14.x https://github.com/llvm/llvm-project.git --verbose --progress
 echo DONE!
 exit
