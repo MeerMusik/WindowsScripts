@@ -15,6 +15,6 @@ if [ -d ${SYSTEMDRIVE}/Dev/GitRepos/icu/ ]; then rm --interactive=never --dir --
 fi
 cd ${SYSTEMDRIVE}/Dev/GitRepos/
 echo 'maint/maint-NN' contains the latest Changes for the used ICU Version. Change the Number to switch to a new ICU Version.
-git clone --branch=maint/maint-71 https://github.com/unicode-org/icu.git/ --verbose --progress
+git clone --branch=maint/maint-72 https://github.com/unicode-org/icu.git/ --verbose --progress
 echo DONE!
 exit
