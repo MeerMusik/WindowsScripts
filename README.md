@@ -1,6 +1,6 @@
 [[_TOC_]]
 # About WindowsScripts
-(C) Copyright 2013-2021 Oliver Niebuhr
+(C) Copyright 2013-2023 Oliver Niebuhr
 
 Very basic Scripts to
 1. Clone (Download) the Source Code of Libraries and Frameworks like ICU, LLVM, OpenSSL and wxWidgets from their Git Repositories
@@ -8,41 +8,30 @@ Very basic Scripts to
 
 May they be useful to you in one way or another.
 
-All Scripts are written to compliment each other. Example: Locally cloned Repositories will be found under
+The Scripts are written to compliment each other. Example: Locally cloned Repositories will be found under
 
 %SystemDrive%\Dev\GitRepos\[Name-Of-The-Repository]
 
-The Build Scripts will search for the Libraries in this Directory.
+The Build Scripts will search for the Source Code of these Libraries in this Directory.
 
-The Majority of these Scripts were used in combination with the Qt Framework, to create the Qt based Version of my Tool. As I have now switched to Ultimate++, they are currently not needed. The other Scripts like for ICU and OpenSSL will or will not get used again.
+These Scripts will only get updated if I run into Issues myself! Bug Reports to fix or update a specific Compiler Flag will be ignored, if it interferes with my use case or it is not compatible with the Version of a Library and or Compiler I am using!
 
-Please keep in mind that these Scripts will only be updated when I feel the need for it! Bug Reports to fix or update a specific Compiler Flag will be ignored, if it interferes with my use case or is not compatible with the used Library or Compiler.
+As I am currently using Rust and Go, these Scripts are currently unused and Bug Reports will probably stay open for many months.
 
-ATTENTION: As the Majority of these Scripts are currently unused, Bug Reports will probably stay open for many months. The best options to get something fixed currently are:
-1. Clone the Repo -> Fix the Bug -> Create a Merge Request ("Pull Request") OR
-2. Fork the Repo -> Fix the Bug -> Enjoy
+The best options to get something fixed are:
+1. Clone the Repository -> Fix the Bug -> Create a Pull Request -> Wait for me to Merge your PR / MR OR
+2. Fork the Repository -> Fix the Bug -> Enjoy the Error Free Script
 
-These Scripts will otherwise only get updated if I run into Issues myself.
-
-Additionally: All UNSUPPORTED Scripts, are in the UNSUPPORTED Directory! You can read about the UNSUPPORTED Scripts in this Document:
-1. [README - NO LONGER SUPPORTED SCRIPTS](UNSUPPORTED/README.md)
-
-## All Scripts are heavily customized. Read the dedicated Sections for Details
+## General Infos
 All Scripts were created and successfully tested under the following Windows and Compiler Versions:
 1. Windows 10 21H1, x86_64
 2. MinGW-w64 on MSYS2, 10.3, x86, x86_64
 
-If not mentioned otherwise, all used Versions of the listed Libraries are compatible with Windows 7 and later.
+Older Compiler Versions should work, if they are not too old. What too old means, has not been fully tested. I personally tested down to GCC 8.1.0
 
-All Scripts are heavily personalized.
-
-Older Compiler Versions should work if they are not too old. What too old means, has not been fully tested. I personally tested down to GCC 8.1.0
-
-You usually need to remove or modify some Compiler Flags for newer and older Versions.
+You usually need to remove or modify some Compiler Flags for newer and older Versions of a Compiler, Linker, Library etc.
 
 Other Compiler Variants like Clang-MinGW-w64 or Clang-MSVC are untested and therefore not supported by me!
-
-Please look at the different Sections about the Build Scripts for Version Numbers - if mentioned. But: Do not rely too heavily on Versions mentioned in this Document as I do not guarantee to keep it updated! If in doubt, look at the Scripts.
 
 ## LICENSE
 The Content in this Repository is Dual-Licensed under "The Unlicense" (Public Domain) OR under the "CC0-1.0 Universal License" (Public Domain with Fallback Mechanism).
@@ -64,12 +53,12 @@ Also: Repositories got removed or hidden if they do not contain a License Docume
 And as always the usual necessary Disclaimer: I AM NOT A LAWYER AND THIS IS NOT LEGAL ADVICE. IF YOU NEED LEGAL ADVICE, CONSULT A LICENSED ATTORNEY.
 
 Here you can find the different License Texts: The Unlicense (Public Domain):
-1. THE_UNLICENSE.txt: [In this Repository](THE_UNLICENSE.txt)
+1. THE_UNLICENSE.txt - In this Repo: [THE_UNLICENSE.txt](THE_UNLICENSE.txt)
 2. The Unlicense: Original at the Authors Website: https://unlicense.org/
 3. The Unlicense: At SPDX.org: https://spdx.org/licenses/Unlicense.html
 
 CC0-1.0 Universal (Public Domain with Fallback Mechanism):
-1. CC0-1.0.txt: [In this Repository](CC0-1.0.txt)
+1. CC0-1.0.txt - In this Repo: [CC0-1.0.txt](CC0-1.0.txt)
 2. CC0-1.0: Full Text at CreativeCommons.org: https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt
 3. CC0-1.0: Human-Readable Summary - English at CreativeCommons.org: https://creativecommons.org/publicdomain/zero/1.0/
 4. CC0-1.0: Human-Readable Summary - German Translation at CreativeCommons.org: https://creativecommons.org/publicdomain/zero/1.0/deed.de
@@ -77,7 +66,7 @@ CC0-1.0 Universal (Public Domain with Fallback Mechanism):
 
 ## Contributing
 The full Contribution Rules can be found in the
-1. CONTRIBUTING.md: [In this Repository](CONTRIBUTING.md)
+1. [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Questions? Need to report a Bug?
 Send me a Message. I will try to reply within 96 hours. Sometimes sooner, sometimes later.
@@ -93,26 +82,8 @@ Remember that Tweets are always public! Everyone can read what you write! If you
 ## List of Scripts
 The '.SH' Shell Scripts are made for MinGW-w64 on MSYS2 - Software Distribution and Building Platform for Windows: https://www.msys2.org/
 
-### AKKomPolTool / Pirates-Little-Helper - (WIP NAME. PLACEHOLDER)
-The Links to the Files have been removed while the Tool will be rewritten from Scratch with another Framework.
-
-The old Source Code based on the Qt Framework will not be published: It is discontinued and in 'Recycle Mode'.
-
-Info:
-1. My personal Website (German): https://oliverniebuhr.de
-2. FAQ on my Website (German): https://oliverniebuhr.de/
-
-Get the Source Code:
-1. Clone Git Repository to local Drive: [I AM AN EMPTY PLACEHOLDER! IGNORE ME!](I AM AN EMPTY PLACEHOLDER! IGNORE ME!)
-2. Update local Git Repository: [I AM AN EMPTY PLACEHOLDER! IGNORE ME!](I AM AN EMPTY PLACEHOLDER! IGNORE ME!)
-
-Build it: The real Build Scripts will be added when they are ready...
-1. X86_64, Static, Debug and Release: [I AM AN EMPTY PLACEHOLDER! IGNORE ME!](I AM AN EMPTY PLACEHOLDER! IGNORE ME!)
-2. X86, Static, Debug and Release: [I AM AN EMPTY PLACEHOLDER! IGNORE ME!](I AM AN EMPTY PLACEHOLDER! IGNORE ME!)
-
 ### Boost - C++ Libraries
-Status: Currently not used<br>
-Version: Master Branch
+Status: Currently not used <br>
 
 Infos:
 1. Documentation: https://www.boost.org/doc/
@@ -129,8 +100,7 @@ Build it:
 4. X86, Static, Debug and Release: [Boostx86Static.sh](MSYS2/Boost/Boostx86Static.sh)
 
 ### Botan - Crypto and TLS for Modern C++
-Status: Currently not used<br>
-Version: Master Branch
+Status: Currently not used <br>
 
 Infos:
 1. Documentation: https://botan.randombit.net/handbook/building.html
@@ -144,9 +114,55 @@ Build it:
 1. X86_64, Static, Debug and Release: [Botanx64Static.sh](MSYS2/Botan/Botanx64Static.sh)
 2. X86, Static, Debug and Release: [Botanx86Static.sh](MSYS2/Botan/Botanx86Static.sh)
 
+### CLANG / LLVM - The LLVM Compiler Infrastructure
+Status: Currently not used <br>
+
+Building from Source is optional. I have only used Clang as a Parser for Qt Framework specific Parts. I have not yet built any Library with Clang directly.
+
+If you use the Build Scripts as they are: Either Install Swig on MSYS2:
+1. X86: pacman -S mingw-w64-i686-swig
+2. X86_64: pacman -S mingw-w64-x86_64-swig
+
+Or:
+1. Download Swig Source: http://www.swig.org/download.html
+2. Unzip the Archive to %SystemDrive%\Dev\swigwin
+3. Build the Swig Binaries (No Idea how, I have never done that)
+
+Swig has additional Dependencies, which will get automatically installed:
+1. PCRE
+2. WinEditLine
+
+Alternatively: Disable building of the LLDB and get rid of the Swig Dependency
+
+Infos:
+1. If you do not have any specific needs, You should use the prebuilt Binaries from https://releases.llvm.org/
+2. General Documentation: https://llvm.org/docs/
+3. How to build Clang / LLVM : Basic starting Guide: https://clang.llvm.org/get_started.html
+
+Get the Source Code:
+1. Clone Git Repository to local Drive: [NewLLVMGit.sh](MSYS2/LLVM/NewLLVMGit.sh)
+2. Update local Git Repository: [UpdateLLVMGit.sh](MSYS2/LLVM/UpdateLLVMGit.sh)
+
+Build it:
+1. X86_64, Debug: [LLVMx64Debug.sh](MSYS2/LLVM/LLVMx64Debug.sh)
+2. X86_64, Release: [LLVMx64Release.sh](MSYS2/LLVM/LLVMx64Release.sh)
+3. X86, Debug: [LLVMx86Debug.sh](MSYS2/LLVM/LLVMx86Debug.sh)
+4. X86, Release: [LLVMx86Release.sh](MSYS2/LLVM/LLVMx86Release.sh)
+
+ATTENTION: DEBUG BUILDS ARE RELEASE BUILDS WITH MINIMUM DEBUG INFORMATION !!
+1. The Debug builds are Release builds with minimum Debug Information (-g1) and ASSERTIONS DISABLED!
+2. The Problem is the Size Limitation in the PE File Format (Portable Executable) https://en.wikipedia.org/wiki/Portable_Executable
+3. The Limitation is the same for 32-Bit (x86) and 64-Bit (x86_64) Binaries as it is part of the File Format Implementation
+4. There is no way to work around this: The LLVM Debug builds contain too many Debug Symbols. The Linker (LD.exe) will fail at the linking stage
+5. If you really need good Debug builds of LLVM (As in: A good Amount of Debug Information): Switch to a 64-Bit Linux or Unix System
+
+Known Limitation:
+1. As of May 2021, enabling Assertions breaks Python with(?) / for(?) LLDB, which leads to an Error Message during the linking stage like: <br> 'tools/lldb/source/API/CMakeFiles/liblldb.dir/__/__/bindings/python/LLDBWrapPython.cpp.obj:LLDBWrapPython.cpp:(.text+0xce): undefined reference to _imp___Py_RefTotal'
+
+It is either a Bug or a Limitation on the Windows Platform, if I remember correctly.
+
 ### CMake - Build Management Tool. Used to build wxWidgets and Clang / LLVM
-Status: Used when a Tool or Library supports it or has it set as a fixed Dependency<br>
-Version: Master Branch
+Status: Used when a Tool or Library supports it or has it set as a fixed Dependency. <br>
 
 Installation on MSYS2:
 1. X86: pacman -S mingw-w64-i686-cmake
@@ -156,9 +172,9 @@ Do NOT use MSYS2 CMake! It has a lot of Compatibility Issues!
 
 I build only from Source, when I need to test specific fixes or a new Feature.
 
-Attention: By Default, You need an existing CMake and Ninja Installation to build CMake from Source! You can uncomment the Lines in the Script to use 'Make'. Do not forget to comment the CMake specific Parts - otherwise you will break the Scripts :)
+Attention: By Default, You need an existing CMake and Ninja Installation to build CMake from Source! You can uncomment the Lines in the Script to use 'Make'. Do not forget to comment the CMake specific Parts - otherwise you will break the Scripts!
 
-I usually use the latest prebuilt x86_64 Binaries (ZIP Archive) from https://cmake.org/download/<br>
+I usually use the latest prebuilt x86_64 Binaries (ZIP Archive) from https://cmake.org/download/ <br>
 If you are unsure: Download the ZIP Archive: No hassle with Installation and Uninstallation. Also very simple to overwrite all the Files with a newer Version that way
 
 Infos:
@@ -172,21 +188,8 @@ Get the Source Code:
 Build it:
 1. X86_64, Static, Release: [CMakex64Release.sh](MSYS2/CMake/CMakex64Release.sh)
 
-### GammaRay - Introspection Tool for the Qt Framework
-See [README - NO LONGER SUPPORTED SCRIPTS](UNSUPPORTED/README.md)
-
-### GTK4 - Main Libraries and Dependencies
-See [README - NO LONGER SUPPORTED SCRIPTS](UNSUPPORTED/README.md)
-
-### GTK4 - Hard Dependencies
-See [README - NO LONGER SUPPORTED SCRIPTS](UNSUPPORTED/README.md)
-
-### GTKMM4 and Dependencies
-See [README - NO LONGER SUPPORTED SCRIPTS](UNSUPPORTED/README.md)
-
 ### ICU - International Components for Unicode
-Status: Currently unused. If it is still needed, has to be determined<br>
-Version: maint/maint-69
+Status: Currently unused. If it is still needed, needs to be determined. <br>
 
 Infos:
 1. Documentation: http://site.icu-project.org/docs
@@ -225,7 +228,7 @@ Get the Source Code:
 1. Clone Git Repository to local Drive: [NewICUGit.sh](MSYS2/ICU/NewICUGit.sh)
 2. Update local Git Repository: [UpdateICUGit.sh](MSYS2/ICU/UpdateICUGit.sh)
 
-You also need [Git Large File Storage Extension](https://git-lfs.github.com/)<br>
+You also need [Git Large File Storage Extension](https://git-lfs.github.com/) <br>
 Need help setting up Git LFS? [Follow the Section 'Detailed Instructions' -> 'Prerequisites: Git and Git LFS' at the ICU Project Site](http://site.ICU-project.org/repository)
 
 Build it:
@@ -236,60 +239,8 @@ Building static Libraries on Windows is not officially supported. MinGW-w64 corr
 1. X86_64, Static, Debug and Release: [ICUx64Static.sh](MSYS2/ICU/BROKEN/ICUx64Static.sh)
 2. X86, Static, Debug and Release: [ICUx86Static.sh](MSYS2/ICU/BROKEN/ICUx86Static.sh)
 
-### JOM - MSVC++ NMake Drop-In Replacement
-See [README - NO LONGER SUPPORTED SCRIPTS](UNSUPPORTED/README.md)
-
-### LLVM / CLANG - The LLVM Compiler Infrastructure
-Status: Currently not used<br>
-Version: Release/12.x Branch
-
-Building from Source is optional. I have only used Clang as a Parser for Qt Framework specific Parts. I have not yet built any Library with Clang directly.
-
-If you use the Build Scripts as they are: Either Install Swig on MSYS2:
-1. X86: pacman -S mingw-w64-i686-swig
-2. X86_64: pacman -S mingw-w64-x86_64-swig
-
-Swig has additional Dependencies, which will get automatically installed:
-1. PCRE
-2. WinEditLine
-
-Or:
-1. Download Swig Source: http://www.swig.org/download.html
-2. Unzip the Archive to %SystemDrive%\Dev\swigwin
-3. Build the Swig Binaries (No Idea how, I have never done that)
-
-Alternatively: Disable building of the LLDB and get rid of the Swig Dependency
-
-Infos:
-1. If you do not have any specific needs, You should use the prebuilt Binaries from https://releases.llvm.org/
-2. General Documentation: https://llvm.org/docs/
-3. How to build LLVM / Clang: Basic starting Guide: https://clang.llvm.org/get_started.html
-
-Get the Source Code:
-1. Clone Git Repository to local Drive: [NewLLVMGit.sh](MSYS2/LLVM/NewLLVMGit.sh)
-2. Update local Git Repository: [UpdateLLVMGit.sh](MSYS2/LLVM/UpdateLLVMGit.sh)
-
-Build it:
-1. X86_64, Debug: [LLVMx64Debug.sh](MSYS2/LLVM/LLVMx64Debug.sh)
-2. X86_64, Release: [LLVMx64Release.sh](MSYS2/LLVM/LLVMx64Release.sh)
-3. X86, Debug: [LLVMx86Debug.sh](MSYS2/LLVM/LLVMx86Debug.sh)
-4. X86, Release: [LLVMx86Release.sh](MSYS2/LLVM/LLVMx86Release.sh)
-
-ATTENTION: DEBUG BUILDS ARE RELEASE BUILDS WITH MINIMUM DEBUG INFORMATION !!
-1. The Debug builds are Release builds with minimum Debug Information (-g1) and ASSERTIONS DISABLED!
-2. The Problem is the Size Limitation in the PE File Format (Portable Executable) https://en.wikipedia.org/wiki/Portable_Executable
-3. The Limitation is the same for 32-Bit (x86) and 64-Bit (x86_64) Binaries as it is part of the File Format Implementation
-4. There is no way to work around this: The LLVM Debug builds contain too many Debug Symbols. The Linker (LD.exe) will fail at the linking stage
-5. If you really need good Debug builds of LLVM (As in: A good Amount of Debug Information): Switch to a 64-Bit Linux or Unix System
-
-TODO - Long-term - No-Priority:
-1. If possible: Find a way to enable Assertions for Debug builds. As of May 2021, enabling Assertions breaks Python with(?) / for(?) LLDB, which leads to an Error Message during the linking stage like:<br> 'tools/lldb/source/API/CMakeFiles/liblldb.dir/__/__/bindings/python/LLDBWrapPython.cpp.obj:LLDBWrapPython.cpp:(.text+0xce): undefined reference to _imp___Py_RefTotal'
-
-It is either a Bug or a Limitation on the Windows Platform, if I remember correctly.
-
 ### Ninja - The Ninja Build System
-Status: Heavily recommended! I use it whenever possible. Not used with Ultimate++<br>
-Version: Master Branch
+Status: Heavily recommended. I use it whenever possible. <br>
 
 Installation on MSYS2:
 1. X86: pacman -S mingw-w64-i686-ninja
@@ -309,8 +260,7 @@ Build it:
 Attention: You need Python for the Bootstrapping Script!
 
 ### OpenSSL - Cryptography and SSL/TLS Toolkit
-Status: Currently not used<br>
-Version: 1.1.1 Branch
+Status: Currently not used <br>
 
 Infos:
 1. Documentation: https://www.openssl.org/docs/
@@ -330,37 +280,25 @@ Build it:
 7. X86, Dynamic, Release: [OpenSSLx86Release.sh](MSYS2/OpenSSL/OpenSSLx86Release.sh)
 8. X86, Static, Release: [OpenSSLx86ReleaseStatic.sh](MSYS2/OpenSSL/OpenSSLx86ReleaseStatic.sh)
 
-### Qt Framework - Cross-Platform Application Development Framework
-See [README - NO LONGER SUPPORTED SCRIPTS](UNSUPPORTED/README.md)
+### Pirates-Little-Helper - (WIP NAME. PLACEHOLDER)
+Status: Delayed indefinitely. Project will potentially be killed off. <br>
 
-#### QtIFW - Qt Installer Framework
-See [README - NO LONGER SUPPORTED SCRIPTS](UNSUPPORTED/README.md)
+The Links to the Files have been removed while the Tool will be rewritten from Scratch in another Framework.
 
-### Visual Studio 2019 Community Edition: Create Offline Installation Layout
-See [README - NO LONGER SUPPORTED SCRIPTS](UNSUPPORTED/README.md)
-
-### wxWidgets - C++ Toolkit
-Status: It was a possible Candidate to replace the Qt Framework. Switched to Ultimate++ instead<br>
-Version: Master Branch = Development Branch
-
-Infos:
-1. Project Website: https://wxwidgets.org/
-2. Documentation: https://docs.wxwidgets.org/3.1/
-3. Download Source Archive or prebuilt Binaries directly: https://wxwidgets.org/downloads/
+Info:
+1. My personal Website (German): https://oliverniebuhr.de
+2. FAQ on my Website (German): https://oliverniebuhr.de/
 
 Get the Source Code:
-1. Get Source from Git Repository: [NewwxWidgetsGit.sh](MSYS2/wxWidgets/NewwxWidgetsGit.sh)
-2. Update local Git Repository: [UpdatewxWidgetsGit.sh](MSYS2/wxWidgets/UpdatewxWidgetsGit.sh)
+1. Clone Git Repository to local Drive: [NewPiratesLittleHelper.sh](PiratesLittleHelper/NewPiratesLittleHelper.sh)
+2. Update local Git Repository: [UpdatePiratesLittleHelper.sh](PiratesLittleHelper/UpdatePiratesLittleHelper.sh)
 
-Build it:
-1. X86_64, Static, Debug and Release: [wxWidgetsx64.sh](MSYS2/wxWidgets/wxWidgetsx64.sh)
-2. X86, Static, Debug and Release: [wxWidgetsx86.sh](MSYS2/wxWidgets/wxWidgetsx86.sh)
+Build it: The real Build Scripts will be added when they are ready...
 
-For the WebView Widget: To use the EDGE Backend, instead of the Internet Explorer 7 based Backend, you need to change
-1. '-DwxUSE_WEBVIEW_IE=ON' to '-DwxUSE_WEBVIEW_IE=OFF' and
-2. '-DwxUSE_WEBVIEW_EDGE=OFF' to '-DwxUSE_WEBVIEW_EDGE=ON'
+Build it: Cross-Compile Linux to Windows: The real Build Scripts will be added when they are ready...
 
-When using the EDGE Backend, CMake will download 1 additional File when configuring! As each Scripts runs 2x (it first builds the Debug Variant and then the Release Variant), the File gets downloaded 2x. Alternatively: Download the File 'WebView2Loader.dll' with Nuget. See https://docs.wxwidgets.org/trunk/classwx_web_view.html for Details
+Cross-Compile Limitations: <br>
+Unknown yet
 
 ## Other Tools - Not provided as a Script
 Hard Dependencies or recommended Libraries.
