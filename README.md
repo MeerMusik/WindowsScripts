@@ -300,6 +300,61 @@ Build it: Cross-Compile Linux to Windows: The real Build Scripts will be added w
 Cross-Compile Limitations: <br>
 Unknown yet
 
+## Zig Programming Language - BROKEN MESS! ZIG DOCS ARE OUTDATED AND INCORRECT! DO NOT USE! PLACEHOLDER FOR LATER!
+WORK - IN - PROGRESS! I WILL WORK ON THIS DURING THE NEXT 6 TO 12 MONTHS!
+
+Building Zig from source is currently a Mess and I highly recommend against it, if you do not contribute to Zig itself or really need a specific Git Commit!<br>
+Zig Nightly Binaries, based on the Master Branch, are available for your convenience: https://ziglang.org/download/
+
+To build Zig from Source, you have different Options. At the time of writing (July 21st 2023):
+Variant 1: Everything from Source:<br>
+Requires: LLVM, LLD, CLANG, CMake 3.20.0 or later, Python 3.94 or later, MSVC++ 16 or later, Visual Studio C++ Build Tools, C++ ATL Build Tools. <br>
+
+The LLVM Version must match the Version used in the Zig Master Branch! No Exception!
+
+Variant 2.1.: Build Zig with the Zig DevKit: Requires: CMake 3.20.0 or later, Python 3.94 or later. This Variant also requires Ninja as the NMake in-place replacement.
+
+Variant 2.2.: Similar as Variant 2.1 but it uses the provided Zig Binaries instead of CMake and Ninja. Use the "Vanilla" Script.
+
+Variant 3.: Use Zig Bootstrap: https://github.com/ziglang/zig-bootstrap I do not provide Scripts for this Variant!
+
+Infos:
+1. Documentation: https://ziglang.org/documentation/master/
+2. Download Source Archive or prebuilt Binaries directly: https://ziglang.org/download/
+
+Get the Source Code:
+1. Clone Git Repository to local Drive: [NewZigGit.sh](MSYS2/Zig/NewZigGit.sh)
+2. Update local Git Repository: [UpdateZigGit.sh](MSYS2/Zig/UpdateZigGit.sh)
+
+Build LLVM, LLD and Clang from Source with Flags specifically required for Zig - MSVC!
+1. X86_64, Static, Debug and Release: [ZigLLVMMSVCx64.cmd](MSYS2/Zig/ZigLLVMMSVCx64.cmd)
+2. X86, Static, Debug and Release: [ZigLLVMMSVCx86.cmd](MSYS2/Zig/ZigLLVMMSVCx86.cmd)
+
+Build Zig with existing LLVM, MSVC++ etc. Toolchain:
+1. Latest Build Infos - Windows MSVC: https://github.com/ziglang/zig/wiki/How-to-build-LLVM,-libclang,-and-liblld-from-source
+2. X86_64, Static, Debug and Release: [Zigx64StaticMSVC.cmd](MSYS2/Zig/Zigx64StaticMSVC.cmd)
+3. X86, Static, Debug and Release: [Zigx86StaticMSVC.cmd](MSYS2/Zig/Zigx86StaticMSVC.cmd)
+
+Build Zig with Devkit - CMake and Ninja - Must be run from CMD or Powershell:
+1. Compile with Devkit Build Info: https://github.com/ziglang/zig/wiki/Building-Zig-on-Windows#option-1a-cmake--ninja
+2. X86_64, Static, Debug and Release: [Zigx64StaticDevkitCMake.cmd](MSYS2/Zig/Zigx64StaticDevkitCMake.cmd)
+3. X86, Static, Debug and Release: [Zigx86StaticDevkitCMake.cmd](MSYS2/Zig/Zigx86StaticDevkitCMake.cmd)
+
+Build Zig with Devkit - Vanilla - Must be run from CMD or Powershell:
+1. Compile with Devkit Build Info: https://github.com/ziglang/zig/wiki/Building-Zig-on-Windows#option-1b-zig-build
+2. X86_64, Static, Debug and Release: [Zigx64StaticDevkitVanilla.sh](MSYS2/Zig/Zigx64StaticDevkitVanilla.cmd)
+3. X86, Static, Debug and Release: [Zigx86StaticDevkitVanilla.sh](MSYS2/Zig/Zigx86StaticDevkitVanilla.cmd)
+
+
+-- NOT SUPPORTED! INCOMPLETE PLACEHOLDER! --
+Build it: Zig itself:
+1. Latest Build Infos - POSIX - Windows MSYS2 GNU: https://github.com/ziglang/zig/wiki/How-to-build-LLVM,-libclang,-and-liblld-from-source#posix
+
+Build LLVM, LLD and Clang from Source with Flags specifically required for Zig - MSYS2 - GNU Compiler!
+1. X86_64, Static, Debug and Release: [ZigLLVMMSYS2x64.sh](MSYS2/Zig/ZigLLVMMSYS2x64.sh)
+2. X86, Static, Debug and Release: [ZigLLVMMSYS2x86.sh](MSYS2/Zig/ZigLLVMMSYS2x86.sh)
+
+
 ## Other Tools - Not provided as a Script
 Hard Dependencies or recommended Libraries.
 
