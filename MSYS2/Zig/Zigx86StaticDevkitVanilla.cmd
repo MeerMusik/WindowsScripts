@@ -9,6 +9,8 @@ rem You should have received a copy of the CC0 Public Domain Dedication along wi
 rem - CC0 1.0 Universal License Text End -
 title BUILD ZIG-X86 DEBUG AND RELEASE STATIC GNU-MINGW64
 :START
+rem Make sure to have the latest Devkit Downloaded and Ready for use: See here how to: https://github.com/ziglang/zig/wiki/Building-Zig-on-Windows
+rem Also the Version of the Zig Devkit must match Major and Minor Version of the existing Zig Compiler!
 rem Build Debug Variant
 set DEVKIT=%SystemDrive%\Dev\zigdevkit\
 if not exist %SystemDrive%\Dev\Builds\Zigx86Debug\ ( 
@@ -37,7 +39,7 @@ cd %SystemDrive%\Dev\Builds\Zigx86Debug\ && ^
 robocopy /s /NJS /NDL /NJH /nc /ns /np %SystemDrive%\Dev\GitRepos\zig\ %SystemDrive%\Dev\Builds\Zigx86Debug\ /xd ".git" & ^
 cd %SystemDrive%\Dev\Builds\Zigx86Debug\ && ^
 rem BUG How to build the Language Reference and Docs??
-%SYSTEMDRIVE%\Dev\zig\zig.exe build -p stage3 --search-prefix %DEVKIT% --zig-lib-dir lib -Dstatic-llvm -Duse-zig-libcxx -Dtarget=x86-windows-gnu --verbose -Dno-langref -Dno-autodocs -Doptimize=Debug --prefix %SYSTEMDRIVE%/Dev/Binaries/Zigx86StaticDebug/ && ^
+%SYSTEMDRIVE%\Dev\zigx86\zig.exe build -p stage3 --search-prefix %DEVKIT% --zig-lib-dir lib -Dstatic-llvm -Duse-zig-libcxx -Dtarget=x86-windows-gnu --verbose -Dno-langref -Dno-autodocs -Doptimize=Debug --prefix %SYSTEMDRIVE%/Dev/Binaries/Zigx86StaticDebug/ && ^
 rem BUG How to use Build Tests? Docs are outdated!
 rem stage3\bin\zig.exe build test
 cd %SystemDrive%\Dev\Builds\Zigx86Debug\ && ^
@@ -79,7 +81,7 @@ robocopy /s /NJS /NDL /NJH /nc /ns /np %SystemDrive%\Dev\GitRepos\zig\ %SystemDr
 cd %SystemDrive%\Dev\Builds\Zigx86Release\ && ^
 rem BUG How to build the Language Reference and Docs??
 rem BUG Which is the current correct Default Value for Release Builds? ReleaseFast? ReleaseSafe? ReleaseSmall?
-%SYSTEMDRIVE%\Dev\zig\zig.exe build -p stage3 --search-prefix %DEVKIT% --zig-lib-dir lib -Dstatic-llvm -Duse-zig-libcxx -Dtarget=x86-windows-gnu --verbose -Dno-langref -Dno-autodocs -Doptimize=ReleaseSmall --prefix %SYSTEMDRIVE%/Dev/Binaries/Zigx86StaticRelease/ && ^
+%SYSTEMDRIVE%\Dev\zigx86\zig.exe build -p stage3 --search-prefix %DEVKIT% --zig-lib-dir lib -Dstatic-llvm -Duse-zig-libcxx -Dtarget=x86-windows-gnu --verbose -Dno-langref -Dno-autodocs -Doptimize=ReleaseSmall --prefix %SYSTEMDRIVE%/Dev/Binaries/Zigx86StaticRelease/ && ^
 rem BUG How to use Build Tests? Docs are outdated!
 rem stage3\bin\zig.exe build test
 cd %SystemDrive%\Dev\Builds\Zigx86Release\ && ^

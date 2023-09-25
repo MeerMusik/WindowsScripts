@@ -9,6 +9,8 @@ rem You should have received a copy of the CC0 Public Domain Dedication along wi
 rem - CC0 1.0 Universal License Text End -
 title BUILD ZIG-X64 DEBUG AND RELEASE STATIC GNU-MINGW64
 :START
+rem Make sure to have the latest Devkit Downloaded and Ready for use: See here how to: https://github.com/ziglang/zig/wiki/Building-Zig-on-Windows
+rem Also the Version of the Zig Devkit must match Major and Minor Version of the existing Zig Compiler!
 rem Build Debug Variant
 set DEVKIT=%SystemDrive%\Dev\zigdevkit\
 if not exist %SystemDrive%\Dev\Builds\Zigx64Debug\ ( 

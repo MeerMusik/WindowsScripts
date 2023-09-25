@@ -24,7 +24,7 @@ The best options to get something fixed are:
 
 ## General Infos
 All Scripts were created and successfully tested under the following Windows and Compiler Versions:
-1. Windows 10 21H1, x86_64
+1. Windows 10 21H1 and later, Windows 11 22H2, x86_64
 2. MinGW-w64 on MSYS2, 10.3, x86, x86_64
 
 Older Compiler Versions should work, if they are not too old. What too old means, has not been fully tested. I personally tested down to GCC 8.1.0
@@ -154,7 +154,7 @@ ATTENTION: DEBUG BUILDS ARE RELEASE BUILDS WITH MINIMUM DEBUG INFORMATION !!
 2. The Problem is the Size Limitation in the PE File Format (Portable Executable) https://en.wikipedia.org/wiki/Portable_Executable
 3. The Limitation is the same for 32-Bit (x86) and 64-Bit (x86_64) Binaries as it is part of the File Format Implementation
 4. There is no way to work around this: The LLVM Debug builds contain too many Debug Symbols. The Linker (LD.exe) will fail at the linking stage
-5. If you really need good Debug builds of LLVM (As in: A good Amount of Debug Information): Switch to a 64-Bit Linux or Unix System
+5. If you really need good Debug builds of LLVM (As in: A good Amount of Debug Information): Switch to a 64-Bit Linux or Unix-like System - in Example a BSD Distribution
 
 Known Limitation:
 1. As of May 2021, enabling Assertions breaks Python with(?) / for(?) LLDB, which leads to an Error Message during the linking stage like: <br> 'tools/lldb/source/API/CMakeFiles/liblldb.dir/__/__/bindings/python/LLDBWrapPython.cpp.obj:LLDBWrapPython.cpp:(.text+0xce): undefined reference to _imp___Py_RefTotal'
@@ -300,8 +300,10 @@ Build it: Cross-Compile Linux to Windows: The real Build Scripts will be added w
 Cross-Compile Limitations: <br>
 Unknown yet
 
-## Zig Programming Language - BROKEN MESS! ZIG DOCS ARE OUTDATED AND INCORRECT! DO NOT USE! PLACEHOLDER FOR LATER!
-WORK - IN - PROGRESS! I WILL WORK ON THIS DURING THE NEXT 6 TO 12 MONTHS!
+## Zig Programming Language - MOSTLY A BROKEN MESS! ZIG DOCS ARE OUTDATED AND BIG PARTS ARE INCORRECT! PLACEHOLDER FOR LATER!
+**WORK - IN - PROGRESS!!!***<br>
+I WILL WORK ON THIS ~~DURING THE NEXT 6 TO 12 MONTHS!~~ AFTER THE ISSUES IN ZIG HAVE BEEN FIXED!<br>
+Which will take atleast until **sometime late 2025 or early 2026**, based on the current Pace and the current Milestones.
 
 Building Zig from source is currently a Mess and I highly recommend against it, if you do not contribute to Zig itself or really need a specific Git Commit!<br>
 Zig Nightly Binaries, based on the Master Branch, are available for your convenience: https://ziglang.org/download/
@@ -314,9 +316,11 @@ The LLVM Version must match the Version used in the Zig Master Branch! No Except
 
 Variant 2.1.: Build Zig with the Zig DevKit: Requires: CMake 3.20.0 or later, Python 3.94 or later. This Variant also requires Ninja as the NMake in-place replacement.
 
-Variant 2.2.: Similar as Variant 2.1 but it uses the provided Zig Binaries instead of CMake and Ninja. Use the "Vanilla" Script.
+Variant 2.2.: Similar to Variant 2.1 but it uses the provided Zig Binaries instead of CMake and Ninja. Use the "Vanilla" Script.
 
-Variant 3.: Use Zig Bootstrap: https://github.com/ziglang/zig-bootstrap I do not provide Scripts for this Variant!
+Variant 3.: Not supported by me: Use Zig Bootstrap: https://github.com/ziglang/zig-bootstrap
+
+32-Bit (X86) Support in the Zig Compiler is broken since at least 2017. GitHub Issue: https://github.com/ziglang/zig/issues/537
 
 Infos:
 1. Documentation: https://ziglang.org/documentation/master/
@@ -327,24 +331,23 @@ Get the Source Code:
 2. Update local Git Repository: [UpdateZigGit.sh](MSYS2/Zig/UpdateZigGit.sh)
 
 Build LLVM, LLD and Clang from Source with Flags specifically required for Zig - MSVC!
-1. BROKEN!!! - X86_64, Static, Debug and Release: [ZigLLVMMSVCx64.cmd](MSYS2/Zig/ZigLLVMMSVCx64.cmd)
-2. BROKEN!!! - X86, Static, Debug and Release: [ZigLLVMMSVCx86.cmd](MSYS2/Zig/ZigLLVMMSVCx86.cmd)
+1. **BROKEN!!! Upstream Issue**: - X86_64, Static, Debug and Release: [ZigLLVMMSVCx64.cmd](MSYS2/Zig/ZigLLVMMSVCx64.cmd)
+2. **BROKEN!!! Upstream Issue**: - X86, Static, Debug and Release: [ZigLLVMMSVCx86.cmd](MSYS2/Zig/ZigLLVMMSVCx86.cmd)
 
 Build Zig with existing LLVM, MSVC++ etc. Toolchain:
 1. Latest Build Infos - Windows MSVC: https://github.com/ziglang/zig/wiki/How-to-build-LLVM,-libclang,-and-liblld-from-source
-2. BROKEN!!! - X86_64, Static, Debug and Release: [Zigx64StaticMSVC.cmd](MSYS2/Zig/Zigx64StaticMSVC.cmd)
-3. BROKEN!!! - X86, Static, Debug and Release: [Zigx86StaticMSVC.cmd](MSYS2/Zig/Zigx86StaticMSVC.cmd)
+2. **BROKEN!!! Upstream Issue**: - X86_64, Static, Debug and Release: [Zigx64StaticMSVC.cmd](MSYS2/Zig/Zigx64StaticMSVC.cmd)
+3. **BROKEN!!! Upstream Issue**: - X86, Static, Debug and Release: [Zigx86StaticMSVC.cmd](MSYS2/Zig/Zigx86StaticMSVC.cmd)
 
 Build Zig with Devkit - CMake and Ninja - Must be run from CMD or Powershell:
 1. Compile with Devkit Build Info: https://github.com/ziglang/zig/wiki/Building-Zig-on-Windows#option-1a-cmake--ninja
-2. BROKEN!!! - X86_64, Static, Debug and Release: [Zigx64StaticDevkitCMake.cmd](MSYS2/Zig/Zigx64StaticDevkitCMake.cmd)
-3. BROKEN!!! - X86, Static, Debug and Release: [Zigx86StaticDevkitCMake.cmd](MSYS2/Zig/Zigx86StaticDevkitCMake.cmd)
+2. **BROKEN!!! Upstream Issue**: - X86_64, Static, Debug and Release: [Zigx64StaticDevkitCMake.cmd](MSYS2/Zig/Zigx64StaticDevkitCMake.cmd)
+3. **BROKEN!!! Upstream Issue**: - X86, Static, Debug and Release: [Zigx86StaticDevkitCMake.cmd](MSYS2/Zig/Zigx86StaticDevkitCMake.cmd)
 
 Build Zig with Devkit - Vanilla - Must be run from CMD or Powershell:
 1. Compile with Devkit Build Info: https://github.com/ziglang/zig/wiki/Building-Zig-on-Windows#option-1b-zig-build
-2. X86_64, Static, Debug and Release: [Zigx64StaticDevkitVanilla.sh](MSYS2/Zig/Zigx64StaticDevkitVanilla.cmd)
-3. BROKEN!!! - X86, Static, Debug and Release: [Zigx86StaticDevkitVanilla.sh](MSYS2/Zig/Zigx86StaticDevkitVanilla.cmd)
-
+2. X86_64, Static, Debug and Release: [Zigx64StaticDevkitVanilla.cmd](MSYS2/Zig/Zigx64StaticDevkitVanilla.cmd)
+3. **BROKEN!!! Upstream Issue**: - X86, Static, Debug and Release: [Zigx86StaticDevkitVanilla.cmd](MSYS2/Zig/Zigx86StaticDevkitVanilla.cmd)
 
 -- NOT SUPPORTED! INCOMPLETE PLACEHOLDER! --
 Build it: Zig itself:
@@ -354,6 +357,38 @@ Build LLVM, LLD and Clang from Source with Flags specifically required for Zig -
 1. X86_64, Static, Debug and Release: [ZigLLVMMSYS2x64.sh](MSYS2/Zig/ZigLLVMMSYS2x64.sh)
 2. X86, Static, Debug and Release: [ZigLLVMMSYS2x86.sh](MSYS2/Zig/ZigLLVMMSYS2x86.sh)
 
+## Ziglings - Zig Learning Exercises
+**WORK - IN - PROGRESS!!!***
+This requires the latest Development Version of the Zig Compiler to be installed OR the Version which is stated in the Repo ReadMe!
+
+This Repo contains very small CLI Programs which are broken. The Goal is to Fix them and also to learn how to read Zig Compiler Errors.<br>
+Even though the Zig Compiler points out the Errors, it is obviously the best approach, to learn the Zig Syntax first, to know what is broken and why.
+
+Infos:
+1. Documentation and Code at Codeberg: https://codeberg.org/ziglings/exercises/
+
+Get the Source Code:
+1. Clone Git Repository to local Drive: [NewZLSGit.sh](MSYS2/ZLS/NewZLSGit.sh)
+2. Update local Git Repository: [UpdateZLSGit.sh](MSYS2/ZLS/UpdateZLSGit.sh)
+
+Build all Exercises in one go: Not really useful as the Programs are broken but atleast they are then outside of the local Git Repo.
+1. X86_64, Debug only: [ZLSx64.sh](MSYS2/ZLS/ZLSx64.sh)
+2. BROKEN - UPSTREAM: X86, Debug only: [ZLSx86.sh](MSYS2/ZLS/ZLSx86.sh)
+
+## ZLS - The Zig Language Server
+**WORK - IN - PROGRESS!!!***
+This requires the latest Development Version of the Zig Compiler to be installed OR the Version which is stated in the Repo ReadMe!
+
+Infos:
+1. Git Repository: https://github.com/zigtools/zls.git
+
+Get the Source Code:
+1. Clone Git Repository to local Drive: [NewZLSGit.sh](MSYS2/Ziglings/NewZiglingsGit.sh)
+2. Update local Git Repository: [UpdateZLSGit.sh](MSYS2/Ziglings/UpdateZiglingsGit.sh)
+
+Build ZLS:
+1. X86_64, Debug and Release: [ZLSx64.sh](MSYS2/Ziglings/Ziglingsx64Static.sh)
+2. X86, Debug and Release: [ZLSx86.sh](MSYS2/Ziglings/Ziglingsx86Static.sh)
 
 ## Other Tools - Not provided as a Script
 Hard Dependencies or recommended Libraries.

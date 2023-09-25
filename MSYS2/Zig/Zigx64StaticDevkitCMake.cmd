@@ -9,6 +9,8 @@ rem You should have received a copy of the CC0 Public Domain Dedication along wi
 rem - CC0 1.0 Universal License Text End -
 title BUILD ZIG-X64 DEBUG AND RELEASE STATIC MSVC
 :START
+rem Make sure to have the latest Devkit Downloaded and Ready for use: See here how to: https://github.com/ziglang/zig/wiki/Building-Zig-on-Windows
+rem Also the Version of the Zig Devkit must match Major and Minor Version of the existing Zig Compiler!
 rem Build Debug Variant
 rem Use Zig CMake Config Value for now!
 rem set CL=/MP%NUMBER_OF_PROCESSORS% /cgthreads8 /utf-8 /nologo /GL- /GS /Gw /Gy /guard:cf /permissive- /Qpar /Qspectre /Zc:__cplusplus /ZH:SHA_256
