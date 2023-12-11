@@ -14,6 +14,6 @@ fi
 if [ -d ${SYSTEMDRIVE}/Dev/GitRepos/openssl/ ]; then rm --interactive=never --dir --recursive --force --verbose ${SYSTEMDRIVE}/Dev/GitRepos/openssl/*.* ${SYSTEMDRIVE}/Dev/GitRepos/openssl/* ${SYSTEMDRIVE}/Dev/GitRepos/openssl/
 fi
 cd ${SYSTEMDRIVE}/Dev/GitRepos/
-git clone --branch openssl-3.1 https://github.com/openssl/openssl.git --verbose --progress
+git clone --branch openssl-3.2 https://github.com/openssl/openssl.git --verbose --progress
 echo DONE!
 exit
